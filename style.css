@@ -1,89 +1,160 @@
 *{
     padding:0;
-    margin:0;
+    margin: 0;
+    font-family: 'Josefin Sans',sans-serif;
     box-sizing: border-box;
 }
-header{
-    width:100%;
+.hero{
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),url('landing page.png');
+    width:100%;
+    background-image:url('portback.png');
     background-size: cover;
-    font-family: sans-serif;
+    background-position: center;
 }
 nav{
-    width:100%;
-    height:100px;
-    color:red;
-    display:flex;
-    justify-content: space-around;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 .logo{
-    font-size: 2em;
-    letter-spacing: 2px;
-}
-
-.menu a{
-    text-decoration: none;
-    color:yellow;
-    padding: 10px 20px;
-    font-size: 20px;
-    position: relative;
-}
-.menu a:before{
-    content: '';
-    position: absolute;
-    top:0;
-    left: 0;
-    width:0%;
-    height: 100%;
-    border-bottom: 2px solid indianred;
-    transition:0.4 linear;
-}
-.menu a:hover::before{
-      width:99%;
-}
-.register a{
-    text-decoration: none;
     color:white;
-    padding: 10px 20px;
-    font-size: 20px;
-    background: greenyellow;
-    border-radius: 8px;
-    transition: .4s;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
-.register a:hover{
-    background: transparent;
-    border: 1px solid indianred;
+span{
+    color: #f9004d;
 }
-.h-txt {
-    max-width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%,-50%);
-    text-align: center;
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding:10px 25px;
+}
+nav ul li a{
     color: white;
-    font-display: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
 }
-.h-txt span{
-    letter-spacing: 5px;
+nav ul li a:hover{
+     color:#f9004d;
+     transition: .4s;
 }
-.h-txt h1{
-    font-size: 3.5em;
-    
+.btn{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform: translateY(-50%);
+}
+h1{
+    color:white;
+    margin:20px 0px 20px;
+    font-size:75px;
+}
+h3{
+    color:white;
+    font-size:25px;
+    margin-bottom:50px;
+}
+h4{
+    color:#fcfc;
+    letter-spacing:2px;
+    font-size: 20px;
+}
+.profile{
+    width:45%;
+    height: 80%;
+    position:absolute;
+    bottom:0;
+    right:100px;
+}
+.profile img{
+    height: 100%;
+    position: absolute;
+    left:50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s,left 1s ;
 }
 
-.h-txt a{
-    text-decoration: none;
-    background-color: indianred;
-    color:white;
-    padding:1px 20px;
-    letter-spacing: 5px;
-    border-radius: 8px;
-    transition:0.4s;
+.profile:hover .girl{
+  left:45%;
 }
-.h-txt a:hover{
-    background: transparent;
-    border: 1px solid indianred;
+.newletter form{
+ width:380px;
+ max-width:100%;
+ position:relative;
+}
+.newletter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #f9004d;
+    outline: none;
+    border-radius:30px;
+}
+.newletter form input:last-child{
+    position:absolute;
+    display:inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #f9004d;
+    color:white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top:6px;
+    right:6px;
+}
+.about{
+    width:100%;
+    padding:100px 0px;
+    background-color: #131212;
+}
+.about-text{
+    width: 550px;
+}
+.main{
+    width:1130px;
+    max-width: 95%;
+    margin:0 auto;
+    display: flex ;
+    align-items: center;
+    justify-items:space-around;
+}
+.about-text h2{
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform:capitalize;
+}
+.about-text p{
+    color:#fcfc;
+    letter-spacing:1px;
+    line-height: 28px;
+    font-size:18px;
+    margin-bottom: 45px;
 }
