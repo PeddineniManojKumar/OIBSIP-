@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Temp conv
+        </title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body >
+        <header>
+        <h1 >Temperature <span>converter</span></h1>
+        <form>
+            &nbsp;&nbsp;&nbsp;&nbsp; <label>Degrees</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Type</label><br><br>
+            <input type="text" name="t" id="po"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+            <select id="op" >
+                <option>
+                   Fahrenheit
+                </option>
+                <option >
+                    Celsius
+                </option>
+               </select><br><br><br>
+               <div>
+                 <label >Result</label><br><br>
+                 <input type="text" name="p" value="result" id="c" size="30" /><br><br><br>
+               </div>
+               <input type="button" value="Convert" id="cone" onclick="tempcon()"/>
+        </form>
+    </header>
+        <script>
+            function tempcon(){
+                var t=document.getElementById('po').value
+                var f=document.getElementById('op').value
+                if(Number.isNaN(t)==true){ 
+                    document.write("<h4>Not able to convert</h4>")
+                }
+                if(Number.isNaN(t)==false){ 
+                if(f=='Fahrenheit'){
+                    p=parseFloat((t-32)/1.8)
+                    p=p.toString()
+                    s='C'
+                    document.getElementById('c').value=p+'°'+s
+                }
+
+                else{
+                    p=parseFloat((t*1.8)+32)
+                    p=p.toString()
+                    document.getElementById('c').value=p+'°'+'F'
+                }
+            }     
+            }
+            
+        </script>
+       
+    </body>
+</html>
